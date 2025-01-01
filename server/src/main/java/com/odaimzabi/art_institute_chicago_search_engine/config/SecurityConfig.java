@@ -19,7 +19,8 @@ public class SecurityConfig {
     config.setAllowedOrigins(List.of("http://localhost:4200"));
     config.setAllowedMethods(List.of("POST", "PUT", "PATCH", "GET", "OPTIONS", "DELETE"));
 
-    config.setAllowedHeaders(List.of(
+    config.setAllowedHeaders(
+        List.of(
             "Authorization",
             "Accept",
             "X-Requested-With",
@@ -27,9 +28,8 @@ public class SecurityConfig {
             "Access-Control-Request-Method",
             "Access-Control-Request-Headers"));
 
-    config.setExposedHeaders(List.of(
-            "Access-Control-Allow-Origin",
-            "Access-Control-Allow-Credentials"));
+    config.setExposedHeaders(
+        List.of("Access-Control-Allow-Origin", "Access-Control-Allow-Credentials"));
 
     config.setMaxAge(3600L);
 
