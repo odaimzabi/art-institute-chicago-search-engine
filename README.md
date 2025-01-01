@@ -85,7 +85,7 @@ To deploy both the Frontend and Backend applications we need to utilize certain 
 - **Vercel** as a deployment platform for our Angular app, we can also create jobs to test, build and deploy the Angular app and make it live and accessible.
 - **Docker** to handle the containerization of our Spring boot server
 - **AWS or DigitalOcean** to run a small Virtual Machine and to use **Docker** to run our Springboot server.
-- We can also create jobs in our CI/CD pipeline to handle this process to deploy the server.
+- We can also create jobs in our CI/CD pipeline to handle the process to deploy the server.
 
 ---
 
