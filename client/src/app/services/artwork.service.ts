@@ -12,7 +12,6 @@ export class ArtworkService {
   constructor(private http: HttpClient) {}
 
   public getArtworks(query: string): Observable<ApiResponse<Artwork[]>> {
-    console.log(this.url);
     const response = this.http.get<ApiResponse<Artwork[]>>(
       `${this.url}/artworks`,
       {
