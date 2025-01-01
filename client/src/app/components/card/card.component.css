@@ -1,0 +1,27 @@
+.card {
+  width: 300px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  text-align: center;
+  background-color: #fff;
+  margin: 16px auto;
+  font-family: Arial, sans-serif;
+}
+
+.card-image {
+  width: 100%;
+  height: 20rem;
+}
+
+.card-title {
+  font-size: 20px;
+  color: #333;
+  margin: 16px 0;
+  padding: 0.5rem;
+}
+
+.card-url {
+  padding: 2rem;
+}

@@ -1,0 +1,18 @@
+<div class="card">
+  <img
+    *ngIf="artwork"
+    [src]="artwork?.thumbnail?.lqip"
+    alt="Card Image"
+    class="card-image"
+  />
+  <div>
+    <h2 class="card-title" *ngIf="artwork">
+      {{ artwork.title || "No title" }}
+    </h2>
+    <div *ngIf="rawImageUrl">
+      <a [href]="rawImageUrl" target="_blank" class="card-url">
+        See Raw Image
+      </a>
+    </div>
+  </div>
+</div>

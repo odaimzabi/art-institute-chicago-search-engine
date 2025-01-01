@@ -1,0 +1,51 @@
+<!-- src/app/app.component.html -->
+<div style="text-align: center; margin-top: 50px">
+  <h1>Art Institute of Chicago Search Engine</h1>
+
+  <div style="margin: 20px 0">
+    <input
+      type="text"
+      placeholder="Enter search text"
+      [(ngModel)]="query"
+      style="
+        padding: 10px;
+        width: 300px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+      "
+    />
+    <button
+      (click)="onSearch()"
+      style="
+        padding: 10px 20px;
+        margin-left: 10px;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      "
+    >
+      Search
+    </button>
+  </div>
+
+  <div *ngIf="artworks && artworks.length > 0">
+    <h2>Results:</h2>
+    <div class="artwork-grid">
+      <div *ngFor="let artwork of artworks">
+        <app-card [artwork]="artwork"></app-card>
+      </div>
+    </div>
+  </div>
+
+  <div *ngIf="!isLoading && query && artworks.length == 0">
+    <p>No results were found for '{{ query }}'</p>
+  </div>
+
+  <div *ngIf="isLoading" style="color: blue; margin-top: 20px">Loading</div>
+
+  <div *ngIf="error" style="color: red; margin-top: 20px">
+    {{ error }}
+  </div>
+</div>
