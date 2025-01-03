@@ -6,6 +6,7 @@ import com.odaimzabi.art_institute_chicago_search_engine.services.ArtworkService
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -13,11 +14,15 @@ import java.util.ArrayList;
 
 import static org.springframework.http.HttpStatus.INTERNAL_SERVER_ERROR;
 
+// TODO: added crossOrigin here to only allow requests from our FE, somehow not working properly
 @RequiredArgsConstructor
 @RestController
+@CrossOrigin
 @RequestMapping(value = "${api.prefix}/artworks")
 public class ArtworkController {
-  private final ArtworkService artworkService;
+
+  @Autowired
+  private ArtworkService artworkService;
 
   @GetMapping()
   public ResponseEntity<ApiResponse> getArtworks(@NotNull @NotBlank @RequestParam(name="query") String query) {

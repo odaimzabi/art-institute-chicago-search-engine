@@ -7,7 +7,7 @@ import { environment } from '../../environments/environment';
   providedIn: 'root',
 })
 export class ArtworkService {
-  private url: string | undefined = environment.apiUrl;
+  private url: string = environment.apiUrl;
 
   constructor(private http: HttpClient) {}
 
