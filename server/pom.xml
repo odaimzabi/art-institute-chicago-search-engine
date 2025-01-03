@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>com.odaimzabi</groupId>
 	<artifactId>art-institute-chicago-search-engine</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>1.0.2</version>
 	<name>art-institute-chicago-search-engine</name>
 	<description>Art institute of chicago search engine</description>
 	<url/>
